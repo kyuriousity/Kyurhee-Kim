@@ -9,14 +9,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #87CEEB, #fff);
+            display: flex;
+            flex-direction: row;
         }
 
         header {
-            background-color: #333;
+            background-color: #1E90FF;
             color: white;
             text-align: center;
             padding: 1em;
+            width: 100%;
         }
 
         section {
@@ -24,7 +27,27 @@
         }
 
         h1, h2, h3 {
-            color: #333;
+            color: #1E90FF;
+        }
+
+        #left-section {
+            flex: 1;
+            padding: 2em;
+            background-color: #fff;
+        }
+
+        #right-section {
+            flex: 2;
+            padding: 2em;
+            background-color: #fff;
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 100vh; /* Set maximum height to viewport height */
+        }
+
+        .profile-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
         }
 
         .project {
@@ -32,7 +55,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #1E90FF;
             color: white;
             text-align: center;
             padding: 1em;
@@ -49,32 +72,42 @@
         <p>Data Scientist</p>
     </header>
 
-    <section id="about">
+    <div id="left-section">
+        <img class="profile-image" src="your-profile-image.jpg" alt="Your Profile Image">
         <h2>About Me</h2>
         <p>Write a brief introduction about yourself here.</p>
-    </section>
+    </div>
 
-    <section id="projects">
-        <h2>Data Science Projects</h2>
+    <div id="right-section">
+        <section id="projects">
+            <h2>Data Science Projects</h2>
 
-        <div class="project">
-            <h3>Project 1: Predictive Analytics</h3>
-            <p>Description of the project, techniques used, and outcomes.</p>
-        </div>
+            <div class="project">
+                <h3>Project 1: Predictive Analytics</h3>
+                <p>Description of the project, techniques used, and outcomes.</p>
+            </div>
 
-        <div class="project">
-            <h3>Project 2: Natural Language Processing</h3>
-            <p>Description of the project, tools employed, and key findings.</p>
-        </div>
-        <!-- Add more data science projects as needed -->
-    </section>
+            <div class="project">
+                <h3>Project 2: Natural Language Processing</h3>
+                <p>Description of the project, tools employed, and key findings.</p>
+            </div>
+            <!-- Add more data science projects as needed -->
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your@email.com</p>
-        <p>LinkedIn: linkedin.com/in/yourname</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <p>Company XYZ - Data Scientist</p>
+            <p>Role description, responsibilities, and achievements.</p>
+            <!-- Add more work experience as needed -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: your@email.com</p>
+            <p>LinkedIn: linkedin.com/in/yourname</p>
+            <p>GitHub: github.com/yourusername</p>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2023 Your Name. All rights reserved.</p>
@@ -82,4 +115,3 @@
 
 </body>
 </html>
-
